@@ -1,6 +1,6 @@
 # eFootball Windows Crash Forensics
 
-![eFootball Windows Crash Forensics](assets/efootball-crash-forensics.png)
+![eFootball Windows Crash Forensics](assets/assetsefootball-crash-forensics.png)
 
 ## Native Crash Investigation & Verified Remediation
 
