@@ -1,0 +1,50 @@
+WINDBG STACK ANALYSIS — SANITIZED
+
+Application:
+eFootball.exe
+
+Exception:
+0xC00000FD
+
+Exception Name:
+STATUS_STACK_OVERFLOW
+
+Failure Classification:
+STACK_OVERFLOW_c00000fd_eFootball.exe!Unknown
+
+Observed Stack Behavior:
+
+* Repeating eFootball internal frames
+* Repeated execution around the same internal code region
+* Approximately thousands of recursive frames
+* Estimated recursive depth: ~5,400 frames
+* Stack exhaustion followed by process termination
+
+Observed High-Level Pattern:
+
+eFootball.exe
+↓
+Internal path/string processing
+↓
+Recursive re-entry
+↓
+Same execution region
+↓
+Repeated stack growth
+↓
+~5,400 frames
+↓
+STATUS_STACK_OVERFLOW
+↓
+0xC00000FD
+
+Symbol Note:
+A repeating region was initially represented using a symbol resembling
+"agsCheckDriverVersion".
+
+The symbol name was not treated as proof of an AMD graphics-driver
+failure because the tested system used an NVIDIA GeForce GTX 1660 Ti
+and the repeating execution remained within eFootball.exe.
+
+Sensitive memory addresses, user paths, and dump-specific identifiers
+have been intentionally omitted from this public evidence file.

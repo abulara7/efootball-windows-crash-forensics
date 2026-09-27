@@ -1,0 +1,38 @@
+WINDOWS EVENT VIEWER — SANITIZED CRASH RECORD
+
+Application:
+eFootball.exe
+
+Version:
+5.5.1.0
+
+Operating System:
+Windows 11 24H2
+
+Faulting Module:
+KERNELBASE.dll
+
+Exception Code:
+0xC00000FD
+
+Exception:
+STATUS_STACK_OVERFLOW
+
+Failure Type:
+Native application crash
+
+Observed Behavior:
+
+* Steam launched eFootball.exe
+* Black screen appeared
+* Process terminated
+* No useful user-facing error was displayed
+
+Investigation Note:
+KERNELBASE.dll was treated as the location where the exception became
+visible, not automatically as the root cause.
+
+The crash dump and stack analysis showed repeated execution inside
+eFootball.exe leading to stack exhaustion.
+
+Sensitive user-specific information has been intentionally removed.
