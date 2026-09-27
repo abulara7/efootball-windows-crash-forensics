@@ -1,5 +1,7 @@
 # eFootball Windows Crash Forensics
 
+![eFootball Windows Crash Forensics](assets/efootball-crash-forensics.png)
+
 ## Native Crash Investigation & Verified Remediation
 
 A technical case study documenting the investigation of a reproducible `eFootball.exe` startup crash on Windows 11 24H2.
